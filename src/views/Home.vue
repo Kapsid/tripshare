@@ -1,7 +1,7 @@
 <template>
-  <HelloWorld />
+  <Decide />
 </template>
 
 <script lang="ts" setup>
-  import HelloWorld from '@/components/HelloWorld.vue'
+  import Decide from '@/components/Decide.vue';
 </script>
