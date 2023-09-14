@@ -1,13 +1,20 @@
-import './assets/main.css'
+/**
+ * main.ts
+ *
+ * Bootstraps Vuetify and other plugins then mounts the App`
+ */
 
-import { createApp } from 'vue'
+// Components
 import App from './App.vue'
-import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
+// Composables
+import { createApp } from 'vue'
 
-Vue.use(BootstrapVue)
-Vue.use(IconsPlugin)
+// Plugins
+import { registerPlugins } from '@/plugins'
 
-createApp(App).mount('#app')
+const app = createApp(App)
+
+registerPlugins(app)
+
+app.mount('#app')
